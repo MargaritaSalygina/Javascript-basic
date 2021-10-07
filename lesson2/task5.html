@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function addition(num1, num2) {
+            return num1 + num2
+        }
+
+
+        function difference(num1, num2) {
+            return num1 - num2
+        }
+
+
+        function division(num1, num2) {
+            return (num1 / num2).toFixed(2)
+        }
+
+
+        function multiply(num1, num2) {
+            return num1 * num2
+        }
+
+
+        /**
+        * Функция возвращает результат выбранной операции двух чисел.
+        * 
+        * @param {number} arg1 - первый аргумент
+        * @param {number} arg2 - второй аргуент
+        * @param {function} operation название операции
+        */
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'addition':
+                    alert(addition(arg1, arg2));
+                    break;
+                case 'difference':
+                    alert(difference(arg1, arg2));
+                    break;
+                case 'division':
+                    alert(division(arg1, arg2));
+                    break;
+                case 'multiply':
+                    alert(multiply(arg1, arg2));
+                    break;
+            }
+
+        }
+
+        mathOperation(2, 5, 'multiply')
+    </script>
+</body>
+
+</html>

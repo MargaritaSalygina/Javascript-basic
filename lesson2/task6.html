@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        let amount = +prompt('Какую сумму вы положили в банк');
+        let remainder = amount % 10;
+        let ending = '';
+
+        switch (remainder) {
+            case 1:
+                ending = "рубль";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                ending = 'рубля';
+                break;
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 0:
+                ending = 'рублей';
+                break;
+            default:
+                throw new Error('неверное значение');
+        }
+        alert(`Ваша сумма в ${amount} ${ending} успешно зачислена`)
+        /**
+         * 1 рубль
+         *
+         * 2 рубля
+         * 3 рубля
+         * 4 рубля
+         *
+         * 5 рублей
+         * 6 рублей
+         * 7 рублей
+         * 8 рублей
+         * 9 рублей
+         * 0 рублей
+         * */
+
+    </script>
+</body>
+
+</html>
